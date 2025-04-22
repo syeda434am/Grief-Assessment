@@ -2,6 +2,10 @@
 
 A personalized grief assessment and support application that provides customized guidance for individuals navigating the grief journey.
 
+## Live Demo
+
+Visit this link to test the app: https://whisperofhealing.streamlit.app/
+
 ## Overview
 
 Grief Compass helps users understand and manage their grief by:
