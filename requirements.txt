@@ -1,9 +1,8 @@
 streamlit
-requests
-pandas
-matplotlib
-seaborn
 langchain_groq
 langchain-core
-langchain   
 python-dotenv
+plotly
+fpdf
+pandas
+requests
