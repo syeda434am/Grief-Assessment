@@ -2,7 +2,7 @@
 
 [![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen.svg)](https://grief-compass.vercel.app)
 
-Grief Compass is a comprehensive digital platform designed to provide personalized support and guidance for individuals navigating through grief. By combining modern technology with empathetic design, we offer tailored resources, daily schedules, and interactive tools to help users process their grief journey in a healthy and supported way.
+Grief Compass is a comprehensive digital platform designed to provide personalized support and guidance for individuals navigating through grief. By combining AI with empathetic design, this platform offers tailored resources, daily schedules, and interactive tools to help users process their grief journey in a healthy and supported way.
 
 ![Grief Compass](/public/gc.png)
 
