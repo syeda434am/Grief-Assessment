@@ -1,0 +1,27 @@
+version: '3.8'
+networks:
+  grief-network:
+    driver: bridge
+services:
+  app:
+    build: .
+    container_name: fastapi_app
+    expose:
+      - '8000'
+    env_file:
+      - .env
+    networks:
+      - grief-network
+    restart: unless-stopped
+  nginx:
+    image: nginx:alpine
+    container_name: nginx_proxy
+    ports:
+      - '5004:80'  # Map port 5001 on VPS to port 80 on the container
+    networks:
+      - grief-network
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - app
+    restart: unless-stopped

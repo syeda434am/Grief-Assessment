@@ -1,0 +1,7 @@
+pycache/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+venv/
+.dockerignore

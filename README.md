@@ -1,104 +1,164 @@
-# Grief Compass
+# Grief Compass 🎗️
 
-A personalized grief assessment and support application that provides customized guidance for individuals navigating the grief journey.
+[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen.svg)](https://grief-compass.vercel.app)
 
-## Live Demo
+Grief Compass is a comprehensive digital platform designed to provide personalized support and guidance for individuals navigating through grief. By combining modern technology with empathetic design, we offer tailored resources, daily schedules, and interactive tools to help users process their grief journey in a healthy and supported way.
 
-Visit this link to test the app: https://whisperofhealing.streamlit.app/
+![Grief Compass](/public/gc.png)
 
-## Overview
+## 🌟 Key Features
 
-Grief Compass helps users understand and manage their grief by:
+- 🤝 **Personalized Grief Support** - AI-powered content customization based on individual circumstances
+- 📅 **Daily Schedule Builder** - Structured daily activities to maintain routine and wellness
+- 🗣️ **Interactive Grief Guide** - Conversational interface for immediate emotional support
+- 📊 **Sentiment Analysis** - Track and understand emotional patterns over time
+- 🎯 **Progress Tracking** - Monitor your grief journey with actionable insights
 
-1. Collecting information about their grief experience through a streamlined assessment
-2. Analyzing responses using AI to generate personalized insights
-3. Creating a comprehensive guide tailored to their specific grief situation
-4. Providing ongoing conversational support through an interactive chat interface
-5. Allowing users to save and revisit previous assessments
+## 🛠️ Technology Stack
 
-All content is dynamically generated using the Groq API, providing personalized guidance rather than generic advice.
+- ⚡️ **Vite** - Lightning fast build tool
+- 🔥 **React 18** - Latest React features
+- 🧩 **TypeScript** - Type safety for better developer experience
+- 🎨 **TailwindCSS** - Utility-first CSS framework
+- 🧰 **ShadCN UI** - Accessible and customizable UI components
+- 📱 **Responsive Design** - Mobile-first approach
+- 🧭 **React Router** - Easy client-side routing
+- 🔄 **React Query** - Data fetching and state management
+- 🧪 **Form Handling** - React Hook Form with Zod validation
 
-## Features
+## 🚀 Getting Started
 
-- **Intuitive Assessment Process**: Simple, conversational assessment flow
-- **Personalized Guidance**: AI-generated content tailored to each person's grief experience
-- **Emotional Visualization**: Visual representation of the user's emotion profile
-- **Interactive Chat Support**: Ongoing conversational guidance to address specific aspects of grief
-- **Downloadable Guides**: PDF export of the complete assessment results and guidance
-- **History Management**: Save and access previous assessments and conversations
+### Prerequisites
 
-## Project Structure
+#### Frontend Requirements
+- Node.js 18+ 
+- npm, yarn, or pnpm
 
-The application is organized into modular components:
+#### Backend Requirements
+- Python 3.10+
+- pip
+- FastAPI
 
-- `app.py`: Main Streamlit application entry point
-- `modules/`: Core functional modules
-  - `assessment.py`: Assessment flow and results display
-  - `intro.py`: Introduction and welcome page
-  - `story.py`: Initial grief story collection
-  - `results.py`: Results processing and display
-  - `history.py`: Assessment history management
-- `services/`: Backend services
-  - `guide_service.py`: AI guide generation using Groq
-  - `ai_service.py`: AI assessment analysis
-- `ui/`: UI components
-  - `components.py`: Reusable UI elements and PDF generation
-- `config/`: Configuration
-  - `questions.py`: Assessment questions
-  - `settings.py`: Application settings
+### Installation
 
-## Setup and Running
-
-1. Clone the repository
-2. Install dependencies:
+1. Clone this repository:
+```bash
+git clone https://github.com/your-username/Grief-Compass.git
+cd Grief-Compass
 ```
+
+2. Install frontend dependencies:
+```bash
+npm install
+# or
+yarn
+# or
+pnpm install
+```
+
+3. Install backend dependencies:
+```bash
 pip install -r requirements.txt
 ```
-3. Set up environment variables in `.env`:
+
+4. Set up environment variables:
+Create a `.env` file in the root directory with:
+```env
+GROQ_API_KEY=your_groq_api_key
+GROQ_MODEL_NAME=your_model_name
+TAVILY_API_KEY=your_tavily_api_key
+VITE_API_BASE_URL=http://localhost:8000
 ```
-GROQ_API_KEY="your_groq_api_key_here"
+
+5. Start the backend server:
+```bash
+uvicorn com.mhire.app.main:app --reload --port 8000
 ```
-4. Run the application:
+
+6. Start the frontend development server:
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
 ```
-streamlit run app.py
+
+7. Open your browser and visit `http://localhost:5173`
+
+## 📁 Project Structure
+
+```
+grief-compass/
+├── com/                 # Backend Python package
+│   └── mhire/app/
+│       ├── main.py     # FastAPI application entry
+│       ├── common/     # Shared utilities
+│       ├── config/     # Configuration management
+│       └── services/   # Backend services
+│           ├── personalized_content/
+│           ├── schedule_builder/
+│           └── sentiment_toolkit/
+├── src/                # Frontend source code
+│   ├── components/     # React components
+│   │   └── ui/        # ShadCN UI components
+│   ├── hooks/         # Custom React hooks
+│   ├── lib/           # Utility functions
+│   ├── pages/         # Page components
+│   ├── App.tsx        # Main React component
+│   ├── index.css      # Global styles
+│   └── main.tsx       # Frontend entry point
+├── public/            # Static assets
+├── nginx/             # Nginx configuration
+├── requirements.txt   # Python dependencies
+├── package.json       # Node.js dependencies
+└── docker-compose.yml # Docker configuration
 ```
 
-## User Flow
+## 🔧 API Endpoints
 
-1. **Home**: Introduction to Grief Compass
-2. **Story Entry**: Share the grief experience in user's own words
-3. **Assessment**: Answer questions about grief experience
-4. **Results**: View personalized analysis and guidance
-5. **Conversation**: Ask follow-up questions to refine guidance
-6. **History**: Access previous assessments and continue conversations
+### Personalized Content
+- `POST /api/personalized-content` - Generate personalized grief support content
+- `GET /api/personalized-content/{user_id}` - Retrieve user's content history
 
-## Dependencies
+### Schedule Builder
+- `POST /api/schedule` - Create a personalized daily schedule
+- `GET /api/schedule/{user_id}` - Get user's current schedule
+- `PUT /api/schedule/{schedule_id}` - Update schedule items
 
-- Streamlit: Web application framework
-- Langchain & Groq: AI integration for personalized content
-- Plotly: Data visualization
-- FPDF: PDF generation
+### Sentiment Analysis
+- `POST /api/sentiment` - Analyze text for emotional content
+- `GET /api/sentiment/history/{user_id}` - Get sentiment history
 
-## Configuration
+## 🚀 Deployment
 
-The application reads configuration from:
-- `.env` file for API keys and environment variables
-- `config/settings.py` for application settings
-- `config/questions.py` for assessment questions
+The application is deployed on Vercel with the following configuration:
+- Frontend: Vercel Edge Network
+- Backend: Vercel Serverless Functions
+- Database: Vercel Postgres
 
-## Contributing
+### Environment Variables Required for Deployment
+```env
+GROQ_API_KEY=your_groq_api_key
+GROQ_MODEL_NAME=your_model_name
+TAVILY_API_KEY=your_tavily_api_key
+VITE_API_BASE_URL=your_production_api_url
+```
 
-To contribute to this project:
-1. Fork the repository
-2. Create a feature branch
-3. Submit a pull request with your changes
+## 🤝 Contributing
 
-## License
+Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+## 📄 License
 
-## Acknowledgements
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-- [Streamlit](https://streamlit.io/) for the web application framework
-- [Groq](https://groq.com/) for LLM API access
-- All contributors to grief research and resources
+## 🙏 Acknowledgments
+
+- Special thanks to mental health professionals who provided guidance
+- ShadCN UI for the beautiful component library
+- The FastAPI team for the excellent backend framework
+
+## 📬 Contact
+
+For support or queries, please create an issue in the repository or contact the maintainers at [your-email@example.com]
