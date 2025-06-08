@@ -16,6 +16,8 @@ Grief Compass is a comprehensive digital platform designed to provide personaliz
 
 ## 🛠️ Technology Stack
 
+- 🚀 **FastAPI** – High-performance Python-based backend with async capabilities
+- 🧠 **AI Integration** – Backend powered by advanced AI model (Meta Llama 3 70b)
 - ⚡️ **Vite** - Lightning fast build tool
 - 🔥 **React 18** - Latest React features
 - 🧩 **TypeScript** - Type safety for better developer experience
@@ -119,23 +121,18 @@ grief-compass/
 
 ### Personalized Content
 - `POST /api/personalized-content` - Generate personalized grief support content
-- `GET /api/personalized-content/{user_id}` - Retrieve user's content history
 
 ### Schedule Builder
 - `POST /api/schedule` - Create a personalized daily schedule
-- `GET /api/schedule/{user_id}` - Get user's current schedule
-- `PUT /api/schedule/{schedule_id}` - Update schedule items
 
 ### Sentiment Analysis
 - `POST /api/sentiment` - Analyze text for emotional content
-- `GET /api/sentiment/history/{user_id}` - Get sentiment history
 
 ## 🚀 Deployment
 
 The application is deployed on Vercel with the following configuration:
 - Frontend: Vercel Edge Network
 - Backend: Vercel Serverless Functions
-- Database: Vercel Postgres
 
 ### Environment Variables Required for Deployment
 ```env
@@ -145,20 +142,6 @@ TAVILY_API_KEY=your_tavily_api_key
 VITE_API_BASE_URL=your_production_api_url
 ```
 
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
-
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- Special thanks to mental health professionals who provided guidance
-- ShadCN UI for the beautiful component library
-- The FastAPI team for the excellent backend framework
-
-## 📬 Contact
-
-For support or queries, please create an issue in the repository or contact the maintainers at [your-email@example.com]
