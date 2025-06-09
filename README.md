@@ -1,6 +1,6 @@
 # Grief Compass 🎗️
 
-[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen.svg)](https://grief-compass.vercel.app)
+[![Live Demo](https://grief-compus.onrender.com/)
 
 Grief Compass is a comprehensive digital platform designed to provide personalized support and guidance for individuals navigating through grief. By combining AI with empathetic design, this platform offers tailored resources, daily schedules, and interactive tools to help users process their grief journey in a healthy and supported way.
 
@@ -8,11 +8,9 @@ Grief Compass is a comprehensive digital platform designed to provide personaliz
 
 ## 🌟 Key Features
 
-- 🤝 **Personalized Grief Support** - AI-powered content customization based on individual circumstances
 - 📅 **Daily Schedule Builder** - Structured daily activities to maintain routine and wellness
 - 🗣️ **Interactive Grief Guide** - Conversational interface for immediate emotional support
 - 📊 **Sentiment Analysis** - Track and understand emotional patterns over time
-- 🎯 **Progress Tracking** - Monitor your grief journey with actionable insights
 
 ## 🛠️ Technology Stack
 
@@ -88,7 +86,7 @@ pnpm dev
 
 7. Open your browser and visit `http://localhost:5173`
 
-## 📁 Project Structure
+## 📁 Project Structure to set with for running in local
 
 ```
 grief-compass/
