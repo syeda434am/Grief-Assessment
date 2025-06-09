@@ -72,12 +72,14 @@ TAVILY_API_KEY=your_tavily_api_key
 VITE_API_BASE_URL=http://localhost:8000
 ```
 
-5. Start the backend server:
+5. Make sure to edit the project structure as mentioned in 'Project Structure' section
+
+6. Start the backend server:
 ```bash
-uvicorn com.mhire.app.main:app --reload --port 8000
+uvicorn com.mhire.app.main:app --reload
 ```
 
-6. Start the frontend development server:
+7. Start the frontend development server:
 ```bash
 npm run dev
 # or
@@ -86,10 +88,10 @@ yarn dev
 pnpm dev
 ```
 
-7. Open your browser and visit `http://localhost:5173`
+8. Open your browser and visit `http://localhost:8080`
 
-## 📁 Project Structure to set with for running in local
-
+## 📁 Project Structure
+- Set the project within below structure by copying the files and folders inside com/mhire/ui/ and paste them outside of the com folder. The structure will then look like below:
 ```
 grief-compass/
 ├── com/                 # Backend Python package
@@ -130,9 +132,7 @@ grief-compass/
 
 ## 🚀 Deployment
 
-The application is deployed on Vercel with the following configuration:
-- Frontend: Vercel Edge Network
-- Backend: Vercel Serverless Functions
+The application is deployed on Render as the Web Service under a particular project (backend and frontend running on two different services)
 
 ### Environment Variables Required for Deployment
 ```env
