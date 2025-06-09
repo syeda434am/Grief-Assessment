@@ -1,7 +1,7 @@
 # Grief Compass 🎗️
 
 <a href="https://grief-compus.onrender.com/">
-  <img src="com/mhire/ui/public/live-demo.png" alt="Live Demo" width="50" />
+  <img src="com/mhire/ui/public/live-demo.png" alt="Live Demo" width="100" />
 </a>
 
 Grief Compass is a comprehensive digital platform designed to provide personalized support and guidance for individuals navigating through grief. By combining AI with empathetic design, this platform offers tailored resources, daily schedules, and interactive tools to help users process their grief journey in a healthy and supported way.
